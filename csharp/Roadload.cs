@@ -16,9 +16,9 @@ namespace roadload
                     && co2Values.Low_roadload_f2.HasValue
                     && co2Values.Low_roadload_tm.HasValue)
                 {
-                    co2Values.Low_roadload_combined = CalculateEnergy(Convert.ToDouble(co2Values.Low_roadload_f0),
-                        Convert.ToDouble(co2Values.Low_roadload_f1), Convert.ToDouble(co2Values.Low_roadload_f2),
-                        Convert.ToDouble(co2Values.Low_roadload_tm));
+                    var roadloadF1 = Convert.ToDouble(co2Values.Low_roadload_f1);
+                    var roadloadTm = Convert.ToDouble(co2Values.Low_roadload_tm);
+                    co2Values.Low_roadload_combined = ((Convert.ToDouble(co2Values.Low_roadload_f0) * roadloadTm) / (1 - Convert.ToDouble(co2Values.Low_roadload_f1))) + ((Convert.ToDouble(co2Values.Low_roadload_f2) * roadloadTm) / (roadloadF1));
                 }
                 else
                 {
@@ -48,9 +48,7 @@ namespace roadload
                     && co2Values.Mid_roadload_f2.HasValue
                     && co2Values.Mid_roadload_tm.HasValue)
                 {
-                    co2Values.Mid_roadload_combined = CalculateEnergy(Convert.ToDouble(co2Values.Mid_roadload_f0),
-                        Convert.ToDouble(co2Values.Mid_roadload_f1), Convert.ToDouble(co2Values.Mid_roadload_f2),
-                        Convert.ToDouble(co2Values.Mid_roadload_tm));
+                    co2Values.Mid_roadload_combined = ((Convert.ToDouble(co2Values.Mid_roadload_f0) * Convert.ToDouble(co2Values.Mid_roadload_tm)) / (1 - Convert.ToDouble(co2Values.Mid_roadload_f1))) + ((Convert.ToDouble(co2Values.Mid_roadload_f2) * Convert.ToDouble(co2Values.Mid_roadload_tm)) / Convert.ToDouble(co2Values.Mid_roadload_f1));
                 }
                 else
                 {
@@ -73,9 +71,9 @@ namespace roadload
             Thread.Sleep(2000);
         }
 
-        public static double CalculateEnergy(double RoadloadF0, double RoadloadF1, double RoadloadF2, double RoadloadTm)
+        public static double CalculateEnergy(double highRoadloadF0, double highRoadloadF1, double highRoadloadF2, double highRoadloadTm)
         {
-            return ((RoadloadF0 * RoadloadTm) / (1 - RoadloadF1)) + ((RoadloadF2 * RoadloadTm) / (RoadloadF1));
+            return ((highRoadloadF0 * highRoadloadTm) / (1 - highRoadloadF1)) + ((highRoadloadF2 * highRoadloadTm) / (highRoadloadF1));
 
         }
     }
