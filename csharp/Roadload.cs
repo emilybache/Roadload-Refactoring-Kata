@@ -9,6 +9,13 @@ namespace roadload
     {
         public async Task CalculateEnergyWithLoads(CO2Values co2Values)
         {
+            calculateCO2Values(co2Values);
+
+            await UpdateCo2Values(co2Values);
+        }
+
+        public static void calculateCO2Values(CO2Values co2Values)
+        {
             if (!co2Values.IsSinglePoint)
             {
                 if (co2Values.Low_roadload_f0.HasValue
@@ -18,13 +25,15 @@ namespace roadload
                 {
                     var roadloadF1 = Convert.ToDouble(co2Values.Low_roadload_f1);
                     var roadloadTm = Convert.ToDouble(co2Values.Low_roadload_tm);
-                    co2Values.Low_roadload_combined = ((Convert.ToDouble(co2Values.Low_roadload_f0) * roadloadTm) / (1 - Convert.ToDouble(co2Values.Low_roadload_f1))) + ((Convert.ToDouble(co2Values.Low_roadload_f2) * roadloadTm) / (roadloadF1));
+                    co2Values.Low_roadload_combined =
+                        ((Convert.ToDouble(co2Values.Low_roadload_f0) * roadloadTm) /
+                         (1 - Convert.ToDouble(co2Values.Low_roadload_f1))) +
+                        ((Convert.ToDouble(co2Values.Low_roadload_f2) * roadloadTm) / (roadloadF1));
                 }
                 else
                 {
                     co2Values.Low_roadload_combined = null;
                 }
-
             }
 
             if (co2Values.High_roadload_f0.HasValue
@@ -48,16 +57,17 @@ namespace roadload
                     && co2Values.Mid_roadload_f2.HasValue
                     && co2Values.Mid_roadload_tm.HasValue)
                 {
-                    co2Values.Mid_roadload_combined = ((Convert.ToDouble(co2Values.Mid_roadload_f0) * Convert.ToDouble(co2Values.Mid_roadload_tm)) / (1 - Convert.ToDouble(co2Values.Mid_roadload_f1))) + ((Convert.ToDouble(co2Values.Mid_roadload_f2) * Convert.ToDouble(co2Values.Mid_roadload_tm)) / Convert.ToDouble(co2Values.Mid_roadload_f1));
+                    co2Values.Mid_roadload_combined =
+                        ((Convert.ToDouble(co2Values.Mid_roadload_f0) * Convert.ToDouble(co2Values.Mid_roadload_tm)) /
+                         (1 - Convert.ToDouble(co2Values.Mid_roadload_f1))) +
+                        ((Convert.ToDouble(co2Values.Mid_roadload_f2) * Convert.ToDouble(co2Values.Mid_roadload_tm)) /
+                         Convert.ToDouble(co2Values.Mid_roadload_f1));
                 }
                 else
                 {
                     co2Values.Mid_roadload_combined = null;
                 }
-
             }
-
-            await UpdateCo2Values(co2Values);
         }
 
         private static async Task UpdateCo2Values(CO2Values co2Values)
