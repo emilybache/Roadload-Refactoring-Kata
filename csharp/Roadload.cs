@@ -9,13 +9,6 @@ namespace roadload
     {
         public async Task CalculateEnergyWithLoads(CO2Values co2Values)
         {
-            calculateCO2Values(co2Values);
-
-            await UpdateCo2Values(co2Values);
-        }
-
-        public static void calculateCO2Values(CO2Values co2Values)
-        {
             if (!co2Values.IsSinglePoint)
             {
                 if (co2Values.Low_roadload_f0.HasValue
@@ -68,6 +61,8 @@ namespace roadload
                     co2Values.Mid_roadload_combined = null;
                 }
             }
+
+            await UpdateCo2Values(co2Values);
         }
 
         private static async Task UpdateCo2Values(CO2Values co2Values)
