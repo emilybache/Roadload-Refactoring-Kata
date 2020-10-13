@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -8,6 +8,13 @@ namespace roadload
     public class CO2Calculator
     {
         public async Task CalculateEnergyWithLoads(CO2Values co2Values)
+        {
+            calculateCO2Values(co2Values);
+
+            await UpdateCo2Values(co2Values);
+        }
+
+        public static void calculateCO2Values(CO2Values co2Values)
         {
             if (!co2Values.IsSinglePoint)
             {
@@ -61,8 +68,6 @@ namespace roadload
                     co2Values.Mid_roadload_combined = null;
                 }
             }
-
-            await UpdateCo2Values(co2Values);
         }
 
         private static async Task UpdateCo2Values(CO2Values co2Values)
