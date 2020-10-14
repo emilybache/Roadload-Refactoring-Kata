@@ -5,6 +5,8 @@
 #include "ApprovalTests.hpp"
 #include <string>
 
+#include "printers.h"
+
 extern "C"
 {
 #include "roadload.h"
@@ -34,7 +36,5 @@ TEST_CASE ("calculateEnergyWithLoads") {
 
     calculateEnergyWithLoads(co2Values);
 
-    CHECK(co2Values->Low_roadload_combined->value == Approx(0.0004222231).margin(1e-10));
-    CHECK(co2Values->Mid_roadload_combined->value == Approx(0.0).margin(1e-10));
-    CHECK(co2Values->High_roadload_combined->value == Approx(0.0007987579).margin(1e-10));
+    ApprovalTests::Approvals::verify(co2Values);
 }

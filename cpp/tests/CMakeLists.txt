@@ -1,7 +1,7 @@
 set(CMAKE_CXX_STANDARD 17)
 set(SOURCE_FILES
         main.cpp
-        roadload_tests.cpp)
+        roadload_tests.cpp printers.h)
 add_executable(tests ${SOURCE_FILES} )
 target_link_libraries(tests src_library Catch2::Catch2 ApprovalTests::ApprovalTests)
 
