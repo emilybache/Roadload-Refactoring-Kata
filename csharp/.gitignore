@@ -2,3 +2,6 @@ bin
 obj
 .vs
 packages/*
+
+.idea
+roadload.sln.DotSettings.user
