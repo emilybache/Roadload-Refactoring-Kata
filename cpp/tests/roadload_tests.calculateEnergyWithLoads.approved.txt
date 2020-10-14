@@ -1,4 +1,129 @@
-Low roadload combined: 0.000422223
+(1, 1, 1, 1, 1) => Low roadload combined: missing
 Mid roadload combined: missing
 High roadload combined: 0.000798758
+
+(1, 1, 1, 1, 0) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(1, 1, 1, 0, 1) => Low roadload combined: 0.000422223
+Mid roadload combined: 0.000598535
+High roadload combined: 0.000798758
+
+(1, 1, 1, 0, 0) => Low roadload combined: 0.000422223
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(1, 1, 0, 1, 1) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(1, 1, 0, 1, 0) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(1, 1, 0, 0, 1) => Low roadload combined: missing
+Mid roadload combined: 0.000598535
+High roadload combined: 0.000798758
+
+(1, 1, 0, 0, 0) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(1, 0, 1, 1, 1) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(1, 0, 1, 1, 0) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(1, 0, 1, 0, 1) => Low roadload combined: 0.000422223
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(1, 0, 1, 0, 0) => Low roadload combined: 0.000422223
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(1, 0, 0, 1, 1) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(1, 0, 0, 1, 0) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(1, 0, 0, 0, 1) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(1, 0, 0, 0, 0) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: 0.000798758
+
+(0, 1, 1, 1, 1) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 1, 1, 1, 0) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 1, 1, 0, 1) => Low roadload combined: 0.000422223
+Mid roadload combined: 0.000598535
+High roadload combined: missing
+
+(0, 1, 1, 0, 0) => Low roadload combined: 0.000422223
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 1, 0, 1, 1) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 1, 0, 1, 0) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 1, 0, 0, 1) => Low roadload combined: missing
+Mid roadload combined: 0.000598535
+High roadload combined: missing
+
+(0, 1, 0, 0, 0) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 0, 1, 1, 1) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 0, 1, 1, 0) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 0, 1, 0, 1) => Low roadload combined: 0.000422223
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 0, 1, 0, 0) => Low roadload combined: 0.000422223
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 0, 0, 1, 1) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 0, 0, 1, 0) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 0, 0, 0, 1) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: missing
+
+(0, 0, 0, 0, 0) => Low roadload combined: missing
+Mid roadload combined: missing
+High roadload combined: missing
+
 
