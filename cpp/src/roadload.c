@@ -1,4 +1,3 @@
-#include <MacTypes.h>
 #include "roadload.h"
 
 double doubleValue(const struct CO2Value* value) {
