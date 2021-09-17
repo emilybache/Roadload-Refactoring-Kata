@@ -3,19 +3,6 @@ package codingdojo;
 public class CO2Calculator {
 
     public void calculateEnergyWithLoads(CO2Values co2Values) {
-        calculateCO2Values(co2Values);
-        updateCo2Values(co2Values);
-    }
-
-    void updateCo2Values(CO2Values co2Values) {
-        // In reality this code would make a network or database call which is simulated with this sleep
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ignored) {
-        }
-    }
-
-    static void calculateCO2Values(CO2Values co2Values) {
         if (!co2Values.IsSinglePoint) {
             if (co2Values.Low_roadload_f0 != null
                     && co2Values.Low_roadload_f1 != null
@@ -56,6 +43,11 @@ public class CO2Calculator {
             } else {
                 co2Values.Mid_roadload_combined = null;
             }
+        }
+        // In reality this code would make a network or database call which is simulated with this sleep
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {
         }
     }
 
