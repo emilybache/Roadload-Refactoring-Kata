@@ -1,13 +1,19 @@
-﻿
+﻿using System.Globalization;
+using System.Threading;
 using ApprovalTests.Combinations;
 using ApprovalTests.Reporters;
 using Xunit;
 
 namespace roadload
 {
+    [UseReporter(typeof(VisualStudioReporter))]
     public class RoadloadTest
     {
-        [UseReporter(typeof(DiffReporter))]
+        public RoadloadTest()
+        {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-us");
+        }
+
         [Fact]
         public void CalculateCO2Values()
         {            
